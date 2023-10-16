@@ -1,0 +1,27 @@
+@use 'base/variables' as v;
+// parte de abajo de login.php
+@use 'base/mixins' as m;
+
+.acciones{
+    //añadimos separacion
+    margin-top: 5rem;
+    //para tener uno del lado drch y otr del izq m(mediaquery)
+    @include m.tablet{
+        display: flex;
+        justify-content: space-between;
+    }
+ 
+ 
+    //para los 2 enlaces
+    a{
+        //cada uno en su propia linea 
+        display:block;
+        text-align: center;
+        margin-bottom: 2rem;
+        color: v.$negro;
+        //para que no se aplique margen al ultimo elemento
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+}

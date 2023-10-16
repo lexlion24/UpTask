@@ -1,0 +1,36 @@
+@use 'variables' as v;
+
+h1, h2, h3 {
+    font-family: v.$fuente_headings;
+    margin: 0 0 calc(v.$separacion / 2) 0 ;
+    font-weight: 900;
+}
+h1 {
+    font-size: 6rem;
+}
+h2 {
+    font-size: 5rem;
+}
+h3 {
+    font-size: 4rem;
+}
+p {
+    font-size: 2rem;
+    color: v.$gris;
+    line-height: 1.8;
+}
+//tiene este orden porque en login php tienen este orden
+.tagline{
+    //cambia un poco 
+    font-family:v.$fuente_headings;
+    //ponemos las letras mas gruesas
+    font-weight: 900;
+    //reescribimos los estilos de p
+    color: v.$negro;
+    font-size: 3rem;
+    text-align: center;
+}
+.descripcion-paginas{
+    //asi se centra el inicio de sesion
+    text-align: center;
+}

@@ -1,0 +1,33 @@
+//importamos tanto variables como mixins 
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+//clase principal
+.formulario{
+    //separacion entre inicio de sesion e inputs
+    margin-top: 5rem;
+    //clase campo
+    .campo{
+        //modelo unidimensional de layout
+        display:flex;
+        //alineado vertical
+        align-items: center;
+        //algo de separacion con el siguiente campo
+        margin-bottom: 2rem;
+        // se ponen dentro para solo dar estilo a los que estan dentro de campo
+        label{
+            //factor de crecimiento de 0 para que la medida fija se de 10rem/100pixels
+            flex:0 0 10rem;
+        }
+        input{
+            //para que crezca a lo ancho
+            flex:1;
+            // un poco mas grandes 
+            padding:1rem ;
+            //eliminamos el borde
+            border: none;
+            //lighten es un mixins de sas 
+            background-color: lighten(v.$gris, 40%);
+        }
+    }
+    
+}
