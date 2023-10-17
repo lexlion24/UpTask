@@ -9,18 +9,17 @@
 <body>
     <!-- esta clase ya esta registrada en los globales y tenemos otro contenedor de 70rm -->
     <div class="contenedor login">
-        <h1 class="rutime">Rutime</h1>
-        <p class="tagline">Crea y Adminsitra tus Proyectos</p>
+        <?php include_once __DIR__.'/../templates/nombre-sitio.php';?>
         <div class="contenedor-sm">
             <p class="descripcion-paginas">Iniciar Sesion</p>
             <form class="formulario" method="post" action="/">
                 <div class="campo">
                 <label for="email">Email</label>
-                <input type="text" name="email" id="email" placeholder="Tu email"/>
+                <input type="email" name="email" id="email" placeholder="Tu email"/>
                 </div>
                 <div class="campo">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="password"/>
+                <input type="password" name="password" id="password" placeholder="Password"/>
                 </div>
                 <input type="submit" class="boton" value="Iniciar Sesion"/>
             </form>

@@ -33,7 +33,7 @@ class LoginController{
         //Render a la vista 
         $router->render('auth/crear',[
             //hacer un title dinamico 
-            'titulo'=>' Crea tu cuenta en Rutime'
+            'titulo'=>' Crea tu cuenta en UpTask'
         ]);
     }
 

@@ -5,7 +5,7 @@
 .login{
     margin-top: 5rem;
     //selecionamos el h1 del login
-    .rutime{
+    .uptask{
         //solo con esto crea un background que va degradandose un poco 
         background:linear-gradient(to right, v.$cyan 0%, lighten(v.$cyan,30%) 100%);
         //las letras se hacen transparentes
@@ -17,6 +17,19 @@
 
         @include m.tablet{
             font-size: 10 rem;
+        }
+    }
+    
+    input[type="submit"]{
+        @include m.boton(v.$cyan, v.$blanco);
+        margin: 0 auto;
+    }
+
+    
+
+    .acciones{
+        a{
+                color: v.$cyan;
         }
     }
 }
