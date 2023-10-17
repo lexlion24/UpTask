@@ -45,3 +45,18 @@
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
 }
+
+@mixin textoDegradado($color){
+     //solo con esto crea un background que va degradandose un poco 
+     background:linear-gradient(to right, $color 0%, lighten($color,30%) 100%);
+     //las letras se hacen transparentes
+     color:transparent;
+     //asi lo que hacemos es que el degradado se aplique a las letras
+     background-clip: text;
+     text-align: center;
+     font-size: 7rem;
+
+     @include tablet{
+         font-size: 10 rem;
+     }
+}

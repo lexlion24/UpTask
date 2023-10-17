@@ -22,8 +22,8 @@ $router->get('/olvide',[LoginController::class, 'olvide']);
 $router->post('/olvide',[LoginController::class, 'olvide']);
 
 //vamos a validar que sea un usuario del sistema y a enviarle la recuperacion de contraseña a traves de su email 
-$router->get('/restablecer',[LoginController::class, 'restablecer']);
-$router->post('/restablecer',[LoginController::class, 'restablecer']);
+$router->get('/reestablecer',[LoginController::class, 'reestablecer']);
+$router->post('/reestablecer',[LoginController::class, 'reestablecer']);
 
 //mensaje de confirmacion de cuenta 
 $router->get('/mensaje',[LoginController::class, 'mensaje']);

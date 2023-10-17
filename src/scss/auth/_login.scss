@@ -6,27 +6,14 @@
     margin-top: 5rem;
     //selecionamos el h1 del login
     .uptask{
-        //solo con esto crea un background que va degradandose un poco 
-        background:linear-gradient(to right, v.$cyan 0%, lighten(v.$cyan,30%) 100%);
-        //las letras se hacen transparentes
-        color:transparent;
-        //asi lo que hacemos es que el degradado se aplique a las letras
-        background-clip: text;
-        text-align: center;
-        font-size: 7rem;
-
-        @include m.tablet{
-            font-size: 10 rem;
-        }
+        @include m.textoDegradado(v.$cyan);
     }
     
     input[type="submit"]{
         @include m.boton(v.$cyan, v.$blanco);
         margin: 0 auto;
     }
-
     
-
     .acciones{
         a{
                 color: v.$cyan;
