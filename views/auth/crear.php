@@ -13,15 +13,18 @@
     <div class="contenedor crear">
         <?php include_once __DIR__ . '/../templates/nombre-sitio.php'; ?>
         <div class="contenedor-sm">
-            <p class="descripcion-paginas">Crea tu cuenta en UpTask</p>
+            <p class="descripcion-paginas">Crea tu cuenta en RuTime</p>
+
+            <?php include_once __DIR__ . '/../templates/alertas.php'; ?>
+            
             <form class="formulario" method="post" action="/crear">
                 <div class="campo">
                     <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" />
+                    <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" value="<?= $usuario->nombre ?>" />
                 </div>
                 <div class="campo">
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Tu email" />
+                    <input type="email" name="email" id="email" placeholder="Tu email" value="<?= $usuario->email ?>" />
                 </div>
                 <div class="campo">
                     <label for="password">Password</label>

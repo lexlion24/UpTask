@@ -2,6 +2,7 @@
 
 namespace Controllers;
 
+use Model\Usuario;
 use MVC\Router;
 
 class LoginController{
@@ -27,13 +28,26 @@ class LoginController{
 
     //crear cuenta
     public static function crear(Router $router){
-        if($_SERVER['REQUEST_METHOD']==='POST'){
+       //esto lo creamos para que se le pasa a la vista porque sino como lo creamos una vez se hace la peticion salta un error
+        $alertas=[];
+        //instanciamos el usuario y al no poner () va a estar vacio;
+        $usuario = new Usuario;
 
+        if($_SERVER['REQUEST_METHOD']==='POST'){
+            //sincronizar en us metodo de activde records
+            $usuario->sincronizar($_POST);
+            $alertas=$usuario->validarNuevaCuenta();
+
+            //debuguear($alertas);
         }
         //Render a la vista 
         $router->render('auth/crear',[
             //hacer un title dinamico 
-            'titulo'=>' Crea tu cuenta en UpTask'
+            'titulo'=>' Crea tu cuenta en RuTime',
+            //asi se le pasa la forma que hemos creado antes
+            'usuario' => $usuario,
+            //aqui si existen pero la primer vez que se carge la vista no
+            'alertas' =>$alertas
         ]);
     }
 
@@ -87,5 +101,3 @@ class LoginController{
     }
 
 }
-
-?>

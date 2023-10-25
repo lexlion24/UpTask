@@ -45,7 +45,7 @@
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
 }
-
+//mixinnuevo donde ponemos la vatriable color para ir tomando un color 
 @mixin textoDegradado($color){
      //solo con esto crea un background que va degradandose un poco 
      background:linear-gradient(to right, $color 0%, lighten($color,30%) 100%);

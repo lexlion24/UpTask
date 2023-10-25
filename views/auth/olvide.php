@@ -13,7 +13,7 @@
     <div class="contenedor olvide">
         <?php include_once __DIR__ . '/../templates/nombre-sitio.php'; ?>
         <div class="contenedor-sm">
-            <p class="descripcion-paginas">Recupera tu acceso UpTask</p>
+            <p class="descripcion-paginas">Recupera tu acceso a RuTime</p>
             <form class="formulario" method="post" action="/olvide">
                 <div class="campo">
                     <label for="email">Email</label>
